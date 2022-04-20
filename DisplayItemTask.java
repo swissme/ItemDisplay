@@ -38,7 +38,7 @@ public class DisplayItemTask extends BukkitRunnable {
             PacketContainer destroyEntity = new PacketContainer(PacketType.Play.Server.ENTITY_DESTROY);
             destroyEntity.getModifier().write(0, new IntArrayList(new int[]{entityId}));
             try {
-                PrisonCore.getInstance().getProtocolManager().sendServerPacket(player, destroyEntity);
+                Plugin.getInstance().getProtocolManager().sendServerPacket(player, destroyEntity);
             } catch (InvocationTargetException e) {
                 e.printStackTrace();
             }
@@ -62,7 +62,7 @@ public class DisplayItemTask extends BukkitRunnable {
         setVelocityPacket.getIntegers().write(3, (int) (velocity.getZ() * 2000.0D));
 
         try {
-            PrisonCore.getInstance().getProtocolManager().sendServerPacket(player, setVelocityPacket);
+            Plugin.getInstance().getProtocolManager().sendServerPacket(player, setVelocityPacket);
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
@@ -77,7 +77,7 @@ public class DisplayItemTask extends BukkitRunnable {
         metaDataPacket.getWatchableCollectionModifier().write(0, entityMetaData.getWatchableObjects());
 
         try {
-            PrisonCore.getInstance().getProtocolManager().sendServerPacket(player, metaDataPacket);
+            Plugin.getInstance().getProtocolManager().sendServerPacket(player, metaDataPacket);
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
