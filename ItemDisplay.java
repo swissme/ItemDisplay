@@ -46,7 +46,7 @@ public class ItemDisplay {
         spawnPacket.getEntityTypeModifier().write(0, EntityType.SNOWBALL);
 
         try {
-            PrisonCore.getInstance().getProtocolManager().sendServerPacket(player, spawnPacket);
+            Plugin.getInstance().getProtocolManager().sendServerPacket(player, spawnPacket);
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
@@ -61,7 +61,7 @@ public class ItemDisplay {
         metaDataPacket.getWatchableCollectionModifier().write(0, entityMetaData.getWatchableObjects());
 
         try {
-            PrisonCore.getInstance().getProtocolManager().sendServerPacket(player, metaDataPacket);
+            Plugin.getInstance().getProtocolManager().sendServerPacket(player, metaDataPacket);
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
