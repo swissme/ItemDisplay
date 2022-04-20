@@ -1,5 +1,3 @@
-package com.orbixmc.prisoncore.core.utils;
-
 import com.comphenix.protocol.*;
 import com.comphenix.protocol.events.*;
 import com.comphenix.protocol.wrappers.*;
